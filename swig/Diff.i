@@ -8,6 +8,7 @@
 
 %include "gsl/gsl_diff.h"
 
+#ifdef SWIGPERL
 
 %perlcode %{
 @EXPORT_OK = qw/
@@ -17,3 +18,5 @@
              /;
 %EXPORT_TAGS = ( all => [ @EXPORT_OK ] );
 %}
+
+#endif

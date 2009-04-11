@@ -3,6 +3,9 @@
 
 %include "typemaps.i"
 %include "gsl_typemaps.i"
+
+#ifdef SWIGPERL
+
 %typemap(argout) (const gsl_function *f,
                        double x, double h,
                        double *result, double *abserr) {
@@ -37,6 +40,9 @@
 %typemap(in) void * {
     $1 = (double *) $input;
 };
+
+#endif
+
 %{
     #include "gsl/gsl_math.h"
     #include "gsl/gsl_deriv.h"

@@ -4,6 +4,8 @@
 
 %apply double *OUTPUT { double x[] };
 
+#ifdef SWIGPERL
+
 %typemap(argout) double x[] {
     AV *tempav;
     I32 len;
@@ -20,6 +22,8 @@
     sv_setnv($result,(NV) *($1+1));
     argvi++;
 }
+
+#endif SWIGPERL
 
 %{
     #include "gsl/gsl_types.h"
