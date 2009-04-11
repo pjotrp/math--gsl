@@ -7,6 +7,8 @@
     #include "gsl/gsl_sys.h"
 %}
 
+#ifdef SWIGPERL
+
 %typemap(in) double * (double dvalue) {
   SV* tempsv;
   if (!SvROK($input)) {
@@ -92,6 +94,9 @@
         $1[i] = z;
     }
 }
+
+#endif
+
 %{
     #include "gsl/gsl_nan.h"
     #include "gsl/gsl_poly.h"

@@ -16,7 +16,7 @@
   %include "../pod/FFT.pod"
 #endif
 
-
+#ifdef SWIGPERL
 
 %typemap(argout) (double data[], const size_t stride, const size_t n) {
     int i=0;
@@ -44,6 +44,8 @@
     $result = sv_2mortal( newRV_noinc( (SV*) tempav) );
     argvi++;
 }
+
+#endif
 
 %{
     #include "gsl/gsl_complex.h"

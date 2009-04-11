@@ -7,6 +7,8 @@ void gsl_ran_dir_2d_trig_method (const gsl_rng * r, double *OUTPUT, double *OUTP
 void gsl_ran_dir_3d (const gsl_rng * r, double *OUTPUT, double *OUTPUT, double *OUTPUT);
 void gsl_ran_bivariate_gaussian (const gsl_rng * r, double sigma_x, double sigma_y, double rho, double *OUTPUT, double *OUTPUT);
 
+#ifdef SWIGPERL
+
 %typemap(in) void * {
     AV *tempav;
     I32 len;
@@ -31,6 +33,8 @@ void gsl_ran_bivariate_gaussian (const gsl_rng * r, double sigma_x, double sigma
 %typemap(freearg) void * {
     free($1);
 }
+
+#endif
 
 %{
     #include "gsl/gsl_randist.h"

@@ -4,6 +4,8 @@
 %include "typemaps.i"
 %include "gsl_typemaps.i"
 
+#ifdef SWIGPERL
+
 %typemap(argout) (double * data, const size_t stride, const size_t n) {
     int i=0;
     AV* tempav = newAV();
@@ -79,6 +81,8 @@
     $result = sv_2mortal( newRV_noinc( (SV*) tempav) );
     argvi++;
 } 
+
+#endif
 
 %apply double * { double *data, double *dest };
 
