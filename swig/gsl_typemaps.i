@@ -1,12 +1,27 @@
 %include "system.i"
+%include "gsl/config.h"
 %include "gsl/gsl_nan.h"
-#ifdef GSL_MINOR_VERSION &&  GSL_MINOR_VERSION >= 12
+
+typedef unsigned int size_t;
+
+#ifdef ASCILIB
+  /* ASciLib always knows which GSL it uses */
+  %include "gsl/gsl_inline.h"
+#else
+  #ifdef GSL_MINOR_VERSION && GSL_MINOR_VERSION >= 12
     %include "gsl_inline.h"
+  #endif
 #endif
 
 %{
     #include "gsl/gsl_nan.h"
 %}
+
+#ifdef SWIGRUBY
+  %include "gsl_ruby_typemaps.i"
+#endif
+
+#ifdef SWIGPERL
 
 %typemap(in) double const [] {
     AV *tempav;
@@ -25,6 +40,10 @@
         tv = av_fetch(tempav, i, 0);
         $1[i] = (double) SvNV(*tv);
     }
+}
+
+%typemap(freearg) double const [] {
+    if ($1) free($1);
 }
 
 %apply double const [] { 
@@ -120,8 +139,7 @@
 };
 
 %typemap(in) gsl_function_fdf * {
-    fprintf(stderr, 'FDF_FUNC');    
-
+    fprintf(stderr, "FDF_FUNC");
 }
 
-typedef int size_t;
+#endif // SWIGPERL
