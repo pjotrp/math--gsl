@@ -17,4 +17,6 @@
 %include "gsl/gsl_statistics_int.h"
 %include "gsl/gsl_statistics_char.h"
 
-%include "../pod/Statistics.pod"
+#ifdef SWIGPERL
+  %include "../pod/Statistics.pod"
+#endif

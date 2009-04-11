@@ -8,4 +8,7 @@
 %}
 
 %include "gsl/gsl_sum.h"
-%include "../pod/Sum.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Sum.pod"
+#endif
