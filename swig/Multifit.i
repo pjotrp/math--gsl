@@ -13,4 +13,8 @@
 %include "gsl/gsl_types.h"
 %include "gsl/gsl_multifit.h"
 %include "gsl/gsl_multifit_nlin.h"
-%include "../pod/Multifit.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Multifit.pod"
+#endif
+

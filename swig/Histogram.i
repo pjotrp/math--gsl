@@ -9,4 +9,8 @@
 %}
 
 %include "gsl/gsl_histogram.h"
-%include "../pod/Histogram.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Histogram.pod"
+#endif
+

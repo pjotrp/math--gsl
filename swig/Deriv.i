@@ -44,4 +44,8 @@
 
 %include "gsl/gsl_math.h"
 %include "gsl/gsl_deriv.h"
-%include "../pod/Deriv.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Deriv.pod"
+#endif
+

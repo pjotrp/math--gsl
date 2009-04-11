@@ -8,4 +8,8 @@
 %}
 %include "gsl/gsl_integration.h"
 %include "gsl/gsl_math.h"
-%include "../pod/Integration.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Integration.pod"
+#endif
+

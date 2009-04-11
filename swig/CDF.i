@@ -6,4 +6,8 @@
 %}
 
 %include "gsl/gsl_cdf.h"
-%include "../pod/CDF.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/CDF.pod"
+#endif
+

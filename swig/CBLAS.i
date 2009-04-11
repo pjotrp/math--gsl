@@ -11,4 +11,7 @@
 %}
 
 %include "gsl/gsl_cblas.h"
-%include "../pod/CBLAS.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/CBLAS.pod"
+#endif

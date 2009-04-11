@@ -102,4 +102,8 @@
 %include "gsl/gsl_sort_vector_int.h"
 %include "gsl/gsl_permutation.h"
 
-%include "../pod/Sort.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Sort.pod"
+#endif
+

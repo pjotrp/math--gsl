@@ -36,4 +36,8 @@ void gsl_ran_bivariate_gaussian (const gsl_rng * r, double sigma_x, double sigma
     #include "gsl/gsl_randist.h"
 %}
 %include "gsl/gsl_randist.h"
-%include "../pod/Randist.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Randist.pod"
+#endif
+

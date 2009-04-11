@@ -6,4 +6,8 @@
 %}
 
 %include "gsl/gsl_siman.h"
-%include "../pod/Siman.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Siman.pod"
+#endif
+

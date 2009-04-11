@@ -7,4 +7,8 @@
 %}
 %include "gsl/gsl_errno.h"
 %include "gsl/gsl_types.h"
-%include "../pod/Errno.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Errno.pod"
+#endif
+

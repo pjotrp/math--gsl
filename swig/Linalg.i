@@ -14,4 +14,8 @@
 %include "gsl/gsl_permutation.h"
 %include "gsl/gsl_complex.h"
 %include "gsl/gsl_complex_math.h"
-%include "../pod/Linalg.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Linalg.pod"
+#endif
+

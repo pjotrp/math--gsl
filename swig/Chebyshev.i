@@ -9,4 +9,8 @@
 %include "gsl/gsl_chebyshev.h"
 %include "gsl/gsl_math.h"
 %include "gsl/gsl_mode.h"
-%include "../pod/Chebyshev.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Chebyshev.pod"
+#endif
+

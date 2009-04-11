@@ -5,4 +5,8 @@
 %}
 
 %include "gsl/gsl_pow_int.h"
-%include "../pod/PowInt.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/PowInt.pod"
+#endif
+

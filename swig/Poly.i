@@ -103,5 +103,9 @@
 %include "gsl/gsl_poly.h"
 %include "gsl/gsl_complex.h"
 %include "gsl/gsl_complex_math.h"
-%include "../pod/Poly.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Poly.pod"
+#endif
+
 

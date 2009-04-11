@@ -8,4 +8,8 @@
     #include "gsl/gsl_sys.h"
 %}
 %include "gsl/gsl_sys.h"
-%include "../pod/Sys.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Sys.pod"
+#endif
+

@@ -19,4 +19,8 @@
 %include "gsl/gsl_permute_vector_double.h"
 %include "gsl/gsl_permute_vector_int.h"
 %include "gsl/gsl_permutation.h"
-%include "../pod/Permutation.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Permutation.pod"
+#endif
+

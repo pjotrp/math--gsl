@@ -10,4 +10,8 @@
 
 %include "gsl/gsl_spline.h"
 
-%include "../pod/Spline.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Spline.pod"
+#endif
+

@@ -13,4 +13,8 @@
 %include "carrays.i"
 %array_functions(double, doubleArray);
 
-%include "../pod/Complex.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Complex.pod"
+#endif
+

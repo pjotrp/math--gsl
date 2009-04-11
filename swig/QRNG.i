@@ -28,4 +28,8 @@
 
 %include "gsl/gsl_types.h"
 %include "gsl/gsl_qrng.h"
-%include "../pod/QRNG.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/QRNG.pod"
+#endif
+

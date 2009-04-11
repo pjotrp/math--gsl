@@ -11,7 +11,11 @@
 %include "gsl/gsl_fft_complex.h"
 %include "gsl/gsl_fft_halfcomplex.h"
 %include "gsl/gsl_fft_real.h"
-%include "../pod/FFT.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/FFT.pod"
+#endif
+
 
 
 %typemap(argout) (double data[], const size_t stride, const size_t n) {

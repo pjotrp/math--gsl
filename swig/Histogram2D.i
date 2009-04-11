@@ -10,4 +10,8 @@
 %}
 
 %include "gsl/gsl_histogram2d.h"
-%include "../pod/Histogram2D.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Histogram2D.pod"
+#endif
+

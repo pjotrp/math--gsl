@@ -5,5 +5,9 @@
 %}
 
 %include "gsl/gsl_machine.h"
-%include "../pod/Machine.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Machine.pod"
+#endif
+
 %include "gsl_typemaps.i"

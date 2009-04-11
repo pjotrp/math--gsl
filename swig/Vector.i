@@ -24,4 +24,8 @@ int fclose(FILE *);
 %include "gsl/gsl_vector_double.h"
 %include "gsl/gsl_vector_int.h"
 
-%include "../pod/Vector.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Vector.pod"
+#endif
+

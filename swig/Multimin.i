@@ -9,4 +9,8 @@
 
 %include "gsl/gsl_types.h"
 %include "gsl/gsl_multimin.h"
-%include "../pod/Multimin.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Multimin.pod"
+#endif
+

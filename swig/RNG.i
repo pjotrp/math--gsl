@@ -6,4 +6,8 @@
 %import "gsl/gsl_types.h"
 
 %include "gsl/gsl_rng.h"
-%include "../pod/RNG.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/RNG.pod"
+#endif
+

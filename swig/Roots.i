@@ -7,4 +7,8 @@
 %}
 %include "gsl/gsl_types.h"
 %include "gsl/gsl_roots.h"
-%include "../pod/Roots.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Roots.pod"
+#endif
+

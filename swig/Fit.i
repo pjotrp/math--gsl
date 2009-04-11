@@ -9,4 +9,8 @@
 %}
 
 %include "gsl/gsl_fit.h"
-%include "../pod/Fit.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Fit.pod"
+#endif
+

@@ -9,4 +9,8 @@
 %include "gsl/gsl_types.h"
 %include "gsl/gsl_wavelet.h"
 
-%include "../pod/Wavelet.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Wavelet.pod"
+#endif
+

@@ -8,4 +8,8 @@
 
 %include "gsl/gsl_types.h"
 %include "gsl/gsl_combination.h"
-%include "../pod/Combination.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Combination.pod"
+#endif
+

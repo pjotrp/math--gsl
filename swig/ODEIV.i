@@ -6,4 +6,8 @@
 %}
 %include "gsl/gsl_types.h"
 %include "gsl/gsl_odeiv.h"
-%include "../pod/ODEIV.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/ODEIV.pod"
+#endif
+

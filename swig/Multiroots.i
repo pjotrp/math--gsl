@@ -15,4 +15,8 @@
 %include "gsl/gsl_types.h"
 %include "gsl/gsl_multiroots.h"
 
-%include "../pod/Multiroots.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Multiroots.pod"
+#endif
+

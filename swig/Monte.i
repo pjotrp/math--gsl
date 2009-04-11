@@ -30,4 +30,8 @@ k
     #include "gsl/gsl_types.h"
     #include "gsl/gsl_errno.h"
 %}
-%include "../pod/Monte.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Monte.pod"
+#endif
+

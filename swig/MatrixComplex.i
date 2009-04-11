@@ -17,4 +17,8 @@
 %include "gsl/gsl_vector_double.h"
 %include "gsl/gsl_matrix_complex_double.h"
 
-%include "../pod/MatrixComplex.pod" 
+
+#ifdef SWIGPERL
+  %include "../pod/MatrixComplex.pod" 
+#endif
+

@@ -7,4 +7,8 @@
 %}
 
 %include "gsl/gsl_dht.h"
-%include "../pod/DHT.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/DHT.pod"
+#endif
+

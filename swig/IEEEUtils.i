@@ -5,4 +5,8 @@
 %}
 
 %include "gsl/gsl_ieee_utils.h"
-%include "../pod/IEEEUtils.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/IEEEUtils.pod"
+#endif
+

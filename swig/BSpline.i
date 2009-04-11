@@ -3,7 +3,10 @@
 %include "gsl_typemaps.i"
 %include "gsl/gsl_bspline.h"
 %include "gsl/gsl_vector.h"
-%include "../pod/BSpline.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/BSpline.pod"
+#endif
 
 %{
     #include "gsl/gsl_bspline.h"

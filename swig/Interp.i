@@ -13,4 +13,8 @@
 %include "gsl/gsl_types.h"
 %include "gsl/gsl_interp.h"
 
-%include "../pod/Interp.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/Interp.pod"
+#endif
+

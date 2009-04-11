@@ -81,4 +81,8 @@
 %include "gsl/gsl_sf_trig.h"
 %include "gsl/gsl_sf_zeta.h"
 
-%include "../pod/SF.pod"
+
+#ifdef SWIGPERL
+  %include "../pod/SF.pod"
+#endif
+
