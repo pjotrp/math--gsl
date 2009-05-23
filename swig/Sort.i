@@ -61,7 +61,7 @@
     int i=0;
     AV* tempav = newAV();
     while( i < $4 ) {
-        av_push(tempav, newSVnv((size_t) $1[i]));
+        av_push(tempav, newSVnv((double) $1[i]));
         i++;
     }
 
@@ -74,7 +74,7 @@
     int i=0;
     AV* tempav = newAV();
     while( i < $2 ) {
-        av_push(tempav, newSVnv((size_t) $1[i]));
+        av_push(tempav, newSVnv((double) $1[i]));
         i++;
     }
 
