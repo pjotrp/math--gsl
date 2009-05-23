@@ -17,7 +17,7 @@
    int len;
 
    if (!rb_obj_is_kind_of($input,rb_cArray))
-     rb_raise(rb_eArgError, "Expected Array of Integers");
+     rb_raise(rb_eArgError, "Expected Array of values");
    len = RARRAY($input)->len;
    $1 = (double *)malloc(len*sizeof(double));
    for (i=0; i<len; ++i)
